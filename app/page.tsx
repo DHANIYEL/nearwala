@@ -11,12 +11,12 @@ const page = () => {
   return (
     <div>
       <NavBar/>
-      <Home/>
+      {/* <Home/>
       <OurServices/>
       <Offers/>
       <Testimonials/>
       <DownloadApp/>
-      <Footer/>
+      <Footer/> */}
     </div>
   )
 }
