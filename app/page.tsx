@@ -12,8 +12,8 @@ const page = () => {
     <div>
       <NavBar/>
        <Home/>
-      {/*<OurServices/>
-      <Offers/>
+      <OurServices/>
+      {/*<Offers/>
       <Testimonials/>
       <DownloadApp/>
       <Footer/> */}
