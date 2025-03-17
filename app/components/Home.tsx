@@ -4,8 +4,10 @@ import Link from "next/link";
 export default function HeroSection() {
   return (
     <section className="w-full py-12 md:py-24 lg:py-32 bg-white">
-      <div className="container padding-x mx-auto"> {/* Use custom padding-x class */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 items-center">
+      <div className="container padding-x mx-auto">
+        {" "}
+        {/* Use custom padding-x class */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
           {/* Left Column - Text Content */}
           <div className="flex flex-col space-y-6">
             {/* Badge */}
@@ -37,8 +39,8 @@ export default function HeroSection() {
                 <span className="text-red-600">Everyday Savings</span>
               </h1>
               <p className="max-w-[600px] text-gray-700 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                Our mission is to fill your wallet with savings and bring you exclusive discounts on every local
-                purchase.
+                Our mission is to fill your wallet with savings and bring you
+                exclusive discounts on every local purchase.
               </p>
             </div>
 
@@ -56,21 +58,21 @@ export default function HeroSection() {
             <div className="flex items-center space-x-4 pt-6">
               <div className="flex -space-x-2">
                 <Image
-                  src="/placeholder.svg?height=40&width=40"
+                  src="/assets/person-1.png"
                   alt="Customer"
                   width={40}
                   height={40}
                   className="rounded-full border-2 border-white"
                 />
                 <Image
-                  src="/placeholder.svg?height=40&width=40"
+                  src="/assets/person-2.png"
                   alt="Customer"
                   width={40}
                   height={40}
                   className="rounded-full border-2 border-white"
                 />
                 <Image
-                  src="/placeholder.svg?height=40&width=40"
+                  src="/assets/person-3.png"
                   alt="Customer"
                   width={40}
                   height={40}
@@ -91,45 +93,22 @@ export default function HeroSection() {
                     <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
                   </svg>
                   <span className="ml-1 font-medium">4.8</span>
-                  <span className="ml-1 text-sm text-gray-500">(12.5k Review)</span>
+                  <span className="ml-1 text-sm text-gray-500">
+                    (12.5k Review)
+                  </span>
                 </div>
               </div>
             </div>
           </div>
 
           {/* Right Column - App Screenshots */}
-          <div className="relative h-[400px] lg:h-[500px]">
-            <div className="absolute inset-0 flex items-center justify-center">
-              <div className="h-[300px] w-[300px] md:h-[400px] md:w-[400px] rounded-full bg-red-500"></div>
-            </div>
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 transform">
-              <div className="relative">
-                {/* First Phone */}
-                <div className="absolute -left-16 -top-10 -rotate-6 transform">
-                  <div className="h-[400px] w-[200px] overflow-hidden rounded-[32px] border-[8px] border-black bg-white shadow-xl">
-                    <Image
-                      src="/placeholder.svg?height=384&width=184"
-                      alt="App Screenshot"
-                      width={184}
-                      height={384}
-                      className="h-full w-full object-cover"
-                    />
-                  </div>
-                </div>
-                {/* Second Phone */}
-                <div className="absolute -right-16 top-10 rotate-6 transform">
-                  <div className="h-[400px] w-[200px] overflow-hidden rounded-[32px] border-[8px] border-black bg-white shadow-xl">
-                    <Image
-                      src="/placeholder.svg?height=384&width=184"
-                      alt="App Screenshot"
-                      width={184}
-                      height={384}
-                      className="h-full w-full object-cover"
-                    />
-                  </div>
-                </div>
-              </div>
-            </div>
+          <div className="relative h-[400px] lg:h-[500px] w-full">
+            {/* Hero Image with Background */}
+            <img
+              src="/assets/hero-img-bg.png"
+              alt="Hero Image with Background"
+              className="w-full h-full object-contain"
+            />
           </div>
         </div>
       </div>
