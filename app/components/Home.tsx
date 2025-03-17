@@ -1,11 +1,138 @@
-import React from 'react'
+import Image from "next/image";
+import Link from "next/link";
 
-const Home = () => {
+export default function HeroSection() {
   return (
-    <div>
-      Home
-    </div>
-  )
-}
+    <section className="w-full py-12 md:py-24 lg:py-32 bg-white">
+      <div className="container padding-x mx-auto"> {/* Use custom padding-x class */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 items-center">
+          {/* Left Column - Text Content */}
+          <div className="flex flex-col space-y-6">
+            {/* Badge */}
+            <div className="inline-flex w-fit items-center rounded-full bg-red-50 px-4 py-1.5 text-sm font-medium text-red-600">
+              <span>More than Savings</span>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                className="ml-1 h-4 w-4"
+              >
+                <circle cx="12" cy="12" r="10" />
+                <path d="M12 16v-4" />
+                <path d="M12 8h.01" />
+              </svg>
+            </div>
 
-export default Home
+            {/* Heading */}
+            <div className="space-y-2">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tighter">
+                Your All-Time <br />
+                Discount App for <br />
+                <span className="text-red-600">Everyday Savings</span>
+              </h1>
+              <p className="max-w-[600px] text-gray-700 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+                Our mission is to fill your wallet with savings and bring you exclusive discounts on every local
+                purchase.
+              </p>
+            </div>
+
+            {/* CTA Button */}
+            <div>
+              <Link
+                href="#"
+                className="inline-flex h-12 items-center justify-center rounded-full bg-red-600 px-8 text-sm font-medium text-white shadow transition-colors hover:bg-red-700 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-red-700"
+              >
+                Download App
+              </Link>
+            </div>
+
+            {/* Customer Reviews */}
+            <div className="flex items-center space-x-4 pt-6">
+              <div className="flex -space-x-2">
+                <Image
+                  src="/placeholder.svg?height=40&width=40"
+                  alt="Customer"
+                  width={40}
+                  height={40}
+                  className="rounded-full border-2 border-white"
+                />
+                <Image
+                  src="/placeholder.svg?height=40&width=40"
+                  alt="Customer"
+                  width={40}
+                  height={40}
+                  className="rounded-full border-2 border-white"
+                />
+                <Image
+                  src="/placeholder.svg?height=40&width=40"
+                  alt="Customer"
+                  width={40}
+                  height={40}
+                  className="rounded-full border-2 border-white"
+                />
+              </div>
+              <div>
+                <p className="font-medium">Our Happy Customer</p>
+                <div className="flex items-center">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                    className="h-4 w-4 text-yellow-400"
+                  >
+                    <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                  </svg>
+                  <span className="ml-1 font-medium">4.8</span>
+                  <span className="ml-1 text-sm text-gray-500">(12.5k Review)</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Right Column - App Screenshots */}
+          <div className="relative h-[400px] lg:h-[500px]">
+            <div className="absolute inset-0 flex items-center justify-center">
+              <div className="h-[300px] w-[300px] md:h-[400px] md:w-[400px] rounded-full bg-red-500"></div>
+            </div>
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 transform">
+              <div className="relative">
+                {/* First Phone */}
+                <div className="absolute -left-16 -top-10 -rotate-6 transform">
+                  <div className="h-[400px] w-[200px] overflow-hidden rounded-[32px] border-[8px] border-black bg-white shadow-xl">
+                    <Image
+                      src="/placeholder.svg?height=384&width=184"
+                      alt="App Screenshot"
+                      width={184}
+                      height={384}
+                      className="h-full w-full object-cover"
+                    />
+                  </div>
+                </div>
+                {/* Second Phone */}
+                <div className="absolute -right-16 top-10 rotate-6 transform">
+                  <div className="h-[400px] w-[200px] overflow-hidden rounded-[32px] border-[8px] border-black bg-white shadow-xl">
+                    <Image
+                      src="/placeholder.svg?height=384&width=184"
+                      alt="App Screenshot"
+                      width={184}
+                      height={384}
+                      className="h-full w-full object-cover"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}

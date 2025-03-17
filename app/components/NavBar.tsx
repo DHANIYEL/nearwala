@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import { Menu, X } from "lucide-react";
 import Image from "next/image";
-import { motion, AnimatePresence } from "framer-motion"; // Import Framer Motion
+import { motion, AnimatePresence } from "framer-motion";
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -27,23 +27,24 @@ export default function Navbar() {
   const handleDownloadClick = () => {
     window.open("https://play.google.com/store/search?q=near+wala&c=apps", "_blank");
   };
+
   return (
     <header
-      className={`w-full bg-white py-4 px-6 md:px-12 fixed top-0 left-0 z-50 transition-all ${
+      className={`w-full bg-white fixed top-0 left-0 z-50 transition-all ${
         isScrolled
           ? "bg-opacity-80 backdrop-blur-sm shadow-sm"
           : "bg-opacity-100"
       }`}
     >
-      <div className="mx-auto flex max-w-7xl items-center justify-between">
+      <div className="padding-x padding-y mx-auto flex max-w-7xl items-center justify-between"> {/* Use custom padding classes */}
         {/* Logo */}
         <Link href="/" className="flex items-center">
           <div className="flex items-center">
             <Image
-              src="/assets/NW-LOGO.png" // Path relative to the `public` directory
+              src="/assets/NW-LOGO.png"
               alt="Nearwala Logo"
-              width={130} // Adjust width as needed
-              height={80} // Adjust height as needed
+              width={130}
+              height={80}
               className="object-contain"
             />
           </div>
@@ -52,19 +53,19 @@ export default function Navbar() {
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center space-x-8">
           <a
-            href="#how-it-works" // Change to the ID of the target section
+            href="#how-it-works"
             className="text-sm font-medium text-gray-600 hover:text-primary ease-in duration-200"
           >
             HOW IT WORKS
           </a>
           <a
-            href="#offers" // Change to the ID of the target section
+            href="#offers"
             className="text-sm font-medium text-gray-600 hover:text-primary ease-in duration-200"
           >
             OFFERS
           </a>
           <a
-            href="#testimonials" // Change to the ID of the target section
+            href="#testimonials"
             className="text-sm font-medium text-gray-600 hover:text-primary ease-in duration-200"
           >
             TESTIMONIALS
@@ -76,9 +77,9 @@ export default function Navbar() {
           <Link
             href="#"
             onClick={(e) => {
-              e.preventDefault(); // Prevent default link behavior
+              e.preventDefault();
               handleDownloadClick();
-              setIsMenuOpen(false); // Close the mobile menu
+              setIsMenuOpen(false);
             }}
             className="rounded-full bg-red-600 px-6 py-2 text-sm font-medium text-white hover:bg-red-700 transition-colors"
           >
@@ -132,9 +133,9 @@ export default function Navbar() {
                   href="#"
                   className="inline-block rounded-full w-fit bg-red-600 px-6 py-2 text-sm font-medium text-white hover:bg-red-700 transition-colors"
                   onClick={(e) => {
-                    e.preventDefault(); // Prevent default link behavior
+                    e.preventDefault();
                     handleDownloadClick();
-                    setIsMenuOpen(false); // Close the mobile menu
+                    setIsMenuOpen(false);
                   }}
                 >
                   Download

@@ -11,8 +11,8 @@ const page = () => {
   return (
     <div>
       <NavBar/>
-      {/* <Home/>
-      <OurServices/>
+       <Home/>
+      {/*<OurServices/>
       <Offers/>
       <Testimonials/>
       <DownloadApp/>
