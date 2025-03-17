@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@import "./scrollbar-hide.css";
 
 :root {
   --background: #ffffff;
@@ -37,7 +38,7 @@ html {
   }
 
   .padding-y {
-    @apply py-4;
+    @apply py-12 md:py-24 lg:py-32;
   }
 
   .flex-center {
@@ -82,3 +83,4 @@ html {
   }
   /* END: Footer styles */
 }
+

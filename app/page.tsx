@@ -13,8 +13,8 @@ const page = () => {
       <NavBar/>
        <Home/>
       <OurServices/>
-      {/*<Offers/>
-      <Testimonials/>
+      <Offers/>
+      {/*<Testimonials/>
       <DownloadApp/>
       <Footer/> */}
     </div>

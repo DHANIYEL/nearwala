@@ -36,7 +36,7 @@ export default function Navbar() {
           : "bg-opacity-100"
       }`}
     >
-      <div className="padding-x padding-y mx-auto flex max-w-7xl items-center justify-between"> {/* Use custom padding classes */}
+      <div className="padding-x py-6 mx-auto flex max-w-7xl items-center justify-between"> {/* Use custom padding classes */}
         {/* Logo */}
         <Link href="/" className="flex items-center">
           <div className="flex items-center">
