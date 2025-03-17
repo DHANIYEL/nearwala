@@ -11,24 +11,15 @@ export default function HeroSection() {
           {/* Left Column - Text Content */}
           <div className="flex flex-col space-y-6">
             {/* Badge */}
-            <div className="inline-flex w-fit items-center rounded-full bg-red-50 px-4 py-1.5 text-sm font-medium text-red-600">
+            <div className="inline-flex w-fit items-center max-md:mt-10 rounded-full bg-red-50 px-4 py-1.5 text-sm font-medium text-red-600">
               <span>More than Savings</span>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="16"
-                height="16"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                className="ml-1 h-4 w-4"
-              >
-                <circle cx="12" cy="12" r="10" />
-                <path d="M12 16v-4" />
-                <path d="M12 8h.01" />
-              </svg>
+              <Image
+                src="/assets/coin-logo.png" // Path to your coin-logo image
+                alt="Coin Logo"
+                width={16} // Adjust based on your image dimensions
+                height={16} // Adjust based on your image dimensions
+                className="ml-1 h-4 w-4" // Match the size of the original SVG
+              />
             </div>
 
             {/* Heading */}
