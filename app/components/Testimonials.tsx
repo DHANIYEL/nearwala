@@ -3,7 +3,7 @@ import { Star } from "lucide-react";
 
 const Testimonials = () => {
   return (
-    <div id="testimonials" className="padding-y padding-x max-w-7xl mx-auto">
+    <div id="testimonials" className="py-5 padding-x max-w-7xl mx-auto">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-18 items-center">
         {/* Left side with background shape and phone image */}
         <div className="relative flex justify-center md:justify-start">
