@@ -31,13 +31,15 @@ const Footer = () => {
           <div className="lg:col-span-2">
             <div className="flex items-center mb-6">
           <div className="flex items-center">
+          <a href="#">
             <Image
               src="/assets/NW-LOGO.png"
               alt="Nearwala Logo"
               width={130}
               height={80}
-              className="object-contain"
+              className="object-contain cursor-pointer"
             />
+            </a>
           </div>
             </div>
 

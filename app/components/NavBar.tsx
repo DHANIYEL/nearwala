@@ -25,7 +25,10 @@ export default function Navbar() {
   }, []);
 
   const handleDownloadClick = () => {
-    window.open("https://play.google.com/store/search?q=near+wala&c=apps", "_blank");
+    window.open(
+      "https://play.google.com/store/search?q=near+wala&c=apps",
+      "_blank"
+    );
   };
 
   return (
@@ -36,20 +39,23 @@ export default function Navbar() {
           : "bg-opacity-100"
       }`}
     >
-      <div className="padding-x py-6 mx-auto flex max-w-7xl items-center justify-between"> {/* Use custom padding classes */}
+      <div className="padding-x py-6 mx-auto flex max-w-7xl items-center justify-between">
+        {" "}
+        {/* Use custom padding classes */}
         {/* Logo */}
         <Link href="/" className="flex items-center">
           <div className="flex items-center">
-            <Image
-              src="/assets/NW-LOGO.png"
-              alt="Nearwala Logo"
-              width={130}
-              height={80}
-              className="object-contain"
-            />
+            <a href="#">
+              <Image
+                src="/assets/NW-LOGO.png"
+                alt="Nearwala Logo"
+                width={130}
+                height={80}
+                className="object-contain"
+              />
+            </a>
           </div>
         </Link>
-
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center space-x-8">
           <a
@@ -71,7 +77,6 @@ export default function Navbar() {
             TESTIMONIALS
           </a>
         </nav>
-
         {/* Download Button */}
         <div className="hidden md:block">
           <Link
@@ -86,7 +91,6 @@ export default function Navbar() {
             Download
           </Link>
         </div>
-
         {/* Mobile Menu Button */}
         <button
           className="md:hidden"
@@ -106,24 +110,24 @@ export default function Navbar() {
             transition={{ type: "tween", ease: "easeInOut", duration: 0.5 }}
             className="fixed top-16 right-0 w-full h-[calc(100vh-4rem)] bg-white z-40 shadow-lg"
           >
-            <nav className="flex flex-col items-center justify-center space-y-6 p-6 border-t border-gray-200">
+            <nav className="flex flex-col items-center justify-center h-full space-y-8 p-6 border-t border-gray-200">
               <Link
                 href="#how-it-works"
-                className="text-sm font-medium text-gray-600 hover:text-primary transition-colors"
+                className="text-lg font-medium text-gray-600 hover:text-primary transition-colors text-center"
                 onClick={() => setIsMenuOpen(false)}
               >
                 HOW IT WORKS
               </Link>
               <Link
                 href="#offers"
-                className="text-sm font-medium text-gray-600 hover:text-primary transition-colors"
+                className="text-lg font-medium text-gray-600 hover:text-primary transition-colors text-center"
                 onClick={() => setIsMenuOpen(false)}
               >
                 OFFERS
               </Link>
               <Link
                 href="#testimonials"
-                className="text-sm font-medium text-gray-600 hover:text-primary transition-colors"
+                className="text-lg font-medium text-gray-600 hover:text-primary transition-colors text-center"
                 onClick={() => setIsMenuOpen(false)}
               >
                 TESTIMONIALS
@@ -131,7 +135,7 @@ export default function Navbar() {
               <div className="pt-4">
                 <Link
                   href="#"
-                  className="inline-block rounded-full w-fit bg-red-600 px-6 py-2 text-sm font-medium text-white hover:bg-red-700 transition-colors"
+                  className="inline-block rounded-full w-fit bg-red-600 px-8 py-3 text-lg font-medium text-white hover:bg-red-700 transition-colors text-center"
                   onClick={(e) => {
                     e.preventDefault();
                     handleDownloadClick();

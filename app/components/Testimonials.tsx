@@ -32,7 +32,7 @@ const Testimonials = () => {
           </div>
 
           {/* Reviewers badge */}
-          <div className="absolute bottom-0 -right-12 max-lg:-bottom-10 bg-white rounded-lg px-4 py-2 shadow-lg flex items-center gap-2">
+          <div className="absolute bottom-0 -right-12 max-lg:-bottom-10 max-sm:-right-4 bg-white rounded-lg px-4 py-2 shadow-lg flex items-center gap-2">
             <div className="flex flex-col gap-5">
               <div>
                 <span className="text-sm font-medium">Our Reviewers</span>
