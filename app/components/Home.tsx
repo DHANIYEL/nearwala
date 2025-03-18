@@ -15,7 +15,7 @@ export default function HeroSection() {
 
   return (
     <section className="w-full py-12 md:py-24 lg:py-32 bg-white">
-      <div className="container padding-x mx-auto">
+      <div className="container padding-x">
         {" "}
         {/* Use custom padding-x class */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
@@ -107,7 +107,7 @@ export default function HeroSection() {
           </div>
 
           {/* Right Column - App Screenshots */}
-          <div className="relative max-w-lg w-full">
+          <div className="relative max-w-lg w-full justify-self-center">
             {/* Hero Image with Background */}
             <img
               src="/assets/hero-img-bg.png"
