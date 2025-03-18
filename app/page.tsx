@@ -6,6 +6,7 @@ import Offers from './components/Offers'
 import Testimonials from './components/Testimonials'
 import DownloadApp from './components/DownloadApp'
 import Footer from './components/Footer'
+import DiscountPopup from './components/DiscountPopup'
 
 const page = () => {
   return (
@@ -17,6 +18,7 @@ const page = () => {
       <Testimonials/>
       <DownloadApp/>
       <Footer/>
+      <DiscountPopup />
     </div>
   )
 }

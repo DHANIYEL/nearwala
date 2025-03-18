@@ -25,10 +25,27 @@ export default function Navbar() {
   }, []);
 
   const handleDownloadClick = () => {
-    window.open(
-      "https://play.google.com/store/search?q=near+wala&c=apps",
-      "_blank"
-    );
+    // Detect if the user is on an Android device
+    const isAndroid = /Android/i.test(navigator.userAgent);
+  
+    // Detect if the user is on an iOS device
+    const isIOS = /iPhone|iPad|iPod/i.test(navigator.userAgent);
+  
+    // Play Store link for Android
+    const playStoreLink = "https://play.google.com/store/search?q=near+wala&c=apps";
+  
+    // App Store link for iOS
+    const appStoreLink = "https://apps.apple.com/in/app/nearwala/id1576686708"; // Replace with your actual App Store link
+  
+    // Redirect based on the device
+    if (isAndroid) {
+      window.open(playStoreLink, "_blank");
+    } else if (isIOS) {
+      window.open(appStoreLink, "_blank");
+    } else {
+      // Fallback for other devices (e.g., desktop)
+      window.open(playStoreLink, "_blank");
+    }
   };
 
   return (
