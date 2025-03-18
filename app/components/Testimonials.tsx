@@ -7,6 +7,7 @@ const Testimonials = () => {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-18 items-center">
         {/* Left side with background shape and phone image */}
         <div className="relative flex justify-center md:justify-start">
+          {/* Background and image container */}
           <div className="relative w-full max-w-md aspect-square">
             {/* Background shape */}
             <Image
@@ -16,11 +17,11 @@ const Testimonials = () => {
               className="object-contain"
             />
 
-            {/* Image positioned at the bottom */}
+            {/* Image positioned at the bottom and slightly bigger */}
             <div className="absolute inset-0 flex items-end justify-center">
-              <div className="relative max-sm:h-72">
+              <div className="relative w-[110%] h-[110%] max-sm:w-[120%] max-sm:h-[120%]">
                 {" "}
-                {/* Smaller size */}
+                {/* Slightly bigger than the background */}
                 <img
                   src="/assets/testimonial-img.png"
                   alt="App screenshot"
@@ -32,7 +33,7 @@ const Testimonials = () => {
 
           {/* Reviewers badge */}
           <div className="absolute bottom-0 -right-12 max-lg:-bottom-10 bg-white rounded-lg px-4 py-2 shadow-lg flex items-center gap-2">
-            <div className="flex flex-col gap-5 ">
+            <div className="flex flex-col gap-5">
               <div>
                 <span className="text-sm font-medium">Our Reviewers</span>
               </div>
@@ -58,9 +59,9 @@ const Testimonials = () => {
                   height={40}
                   className="rounded-full border-2 border-white"
                 />
-              <div className="flex items-center bg-red-500 text-white rounded-full w-10 h-10 justify-center text-xs font-bold">
-                12+
-              </div>
+                <div className="flex items-center bg-red-500 text-white rounded-full w-10 h-10 justify-center text-xs font-bold">
+                  12+
+                </div>
               </div>
             </div>
           </div>
