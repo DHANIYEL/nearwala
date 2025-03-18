@@ -41,7 +41,7 @@ const Offers = () => {
     distance?: number; // Optional property for distance
   };
   // Add location data to each shop
-  const offers = [
+  const offers : Offer[] = [
     {
       id: 1,
       name: "Coco Coopa",
@@ -210,7 +210,7 @@ const Offers = () => {
   };
 
   return (
-    <section className="w-full padding-y bg-white">
+    <section className="w-full padding-y bg-white" id="offers">
       <div className="container padding-x mx-auto">
         {/* Section Header */}
         <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-8">

@@ -20,7 +20,7 @@ const OurServices = () => {
   ]
 
   return (
-    <section className="w-full padding-y bg-white">
+    <section className="w-full padding-y bg-white" id="how-it-works">
       <div className="container padding-x mx-auto">
         {/* Section Header */}
         <div className="text-center mb-12">
