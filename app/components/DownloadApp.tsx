@@ -1,6 +1,7 @@
-"use client"
+"use client";
 
 import Image from "next/image";
+import { motion } from "framer-motion";
 
 const DownloadApp = () => {
   const navigatePlayStore = () => {
@@ -17,7 +18,13 @@ const DownloadApp = () => {
   };
 
   return (
-    <div className="padding-x" id="downloadapp">
+    <motion.div
+      className="padding-x"
+      id="downloadapp"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 100 }}
+      transition={{ duration: 1.3, ease: "easeOut" }}
+    >
       <div className="bg-orange-50 max-md:py-12 max-lg:py-8 padding-x rounded-3xl max-w-7xl mx-auto overflow-hidden">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
           {/* Left side content */}
@@ -31,13 +38,17 @@ const DownloadApp = () => {
             </h2>
 
             <p className="text-gray-700 text-base sm:text-lg">
-              Discover unbeatable discounts wherever and whenever you shop. Save instantly on every purchase!
+              Discover unbeatable discounts wherever and whenever you shop. Save
+              instantly on every purchase!
             </p>
 
             {/* App store buttons */}
             <div className="flex flex-wrap justify-center md:justify-start gap-4 pt-4">
               {/* Play Store Button */}
-              <button onClick={navigatePlayStore} className="inline-block cursor-pointer">
+              <button
+                onClick={navigatePlayStore}
+                className="inline-block cursor-pointer"
+              >
                 <Image
                   src="/assets/play-store.svg"
                   alt="Get it on Google Play"
@@ -48,7 +59,10 @@ const DownloadApp = () => {
               </button>
 
               {/* App Store Button (if needed) */}
-              <button onClick={navigateAppStore} className="inline-block cursor-pointer">
+              <button
+                onClick={navigateAppStore}
+                className="inline-block cursor-pointer"
+              >
                 <Image
                   src="/assets/app-store.svg"
                   alt="Download on App Store"
@@ -74,7 +88,7 @@ const DownloadApp = () => {
           </div>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

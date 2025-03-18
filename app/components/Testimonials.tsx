@@ -1,12 +1,19 @@
+"use client"
+
 import Image from "next/image";
 import { Star } from "lucide-react";
+import { motion } from "framer-motion";
 
 const Testimonials = () => {
   return (
     <div id="testimonials" className=" padding-y padding-x max-w-7xl mx-auto">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-18 items-center">
         {/* Left side with background shape and phone image */}
-        <div className="relative flex justify-center md:justify-start">
+        <motion.div className="relative flex justify-center md:justify-start"
+          initial={{opacity:0, x:-50}}
+          animate={{opacity:100, x:0}}
+          transition={{duration:0.8, ease: "easeOut"}}
+        >
           {/* Background and image container */}
           <div className="relative w-full max-w-md aspect-square">
             {/* Background shape */}
@@ -65,10 +72,14 @@ const Testimonials = () => {
               </div>
             </div>
           </div>
-        </div>
+        </motion.div>
 
         {/* Right side with testimonial content */}
-        <div className="space-y-6">
+        <motion.div className="space-y-6"
+          initial={{opacity:0, y: -50}}
+          animate={{opacity:100, y: 0}}
+          transition={{duration:0.8, ease:"easeOut"}}
+        >
           <div className="uppercase text-red-500 font-medium tracking-wider text-sm">
             What they say
           </div>
@@ -110,7 +121,7 @@ const Testimonials = () => {
               <span className="ml-2 text-sm text-gray-500">4.8</span>
             </div>
           </div>
-        </div>
+        </motion.div>
       </div>
     </div>
   );

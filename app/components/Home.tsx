@@ -2,10 +2,9 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
+import { motion } from "framer-motion";
 
 export default function HeroSection() {
-  
   const handleDownloadClick = () => {
     window.open(
       "https://play.google.com/store/search?q=near+wala&c=apps",
@@ -16,11 +15,14 @@ export default function HeroSection() {
   return (
     <section className="w-full py-12 md:py-24 lg:py-32 bg-white">
       <div className="container padding-x mx-auto max-w-7xl">
-        {" "}
-        {/* Use custom padding-x class */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
           {/* Left Column - Text Content */}
-          <div className="flex flex-col space-y-6">
+          <motion.div
+            className="flex flex-col space-y-6"
+            initial={{ opacity: 0, x: -50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+          >
             {/* Badge */}
             <div className="inline-flex w-fit items-center max-md:mt-10 rounded-full bg-red-50 px-4 py-1.5 text-sm font-medium text-red-600">
               <span>More than Savings</span>
@@ -104,17 +106,22 @@ export default function HeroSection() {
                 </div>
               </div>
             </div>
-          </div>
+          </motion.div>
 
           {/* Right Column - App Screenshots */}
-          <div className="relative max-w-lg w-full justify-self-center">
+          <motion.div
+            className="relative max-w-lg w-full justify-self-center"
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+          >
             {/* Hero Image with Background */}
             <img
               src="/assets/hero-img-bg.png"
               alt="Hero Image with Background"
               className="w-full h-full object-contain"
             />
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>
