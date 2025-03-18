@@ -263,7 +263,7 @@ const Offers = () => {
           style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
         >
           {filteredOffers.map((offer) => (
-            <div key={offer.id} className="flex-none max-sm:w-[240px] max-sm:h-[280px] w-[280px] md:w-[320px] snap-start">
+            <div key={offer.id} className="flex-none max-sm:w-[240px] max-sm:h-[280px] w-[280px] h-[380px] md:w-[320px] snap-start">
               <div className="relative h-full rounded-lg overflow-hidden group cursor-pointer"
                 onClick={() => {
                   handleDownloadClick();
