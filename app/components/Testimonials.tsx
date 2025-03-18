@@ -31,34 +31,38 @@ const Testimonials = () => {
           </div>
 
           {/* Reviewers badge */}
-          <div className="absolute bottom-0 -right-20 max-lg:-bottom-10 bg-white rounded-full px-4 py-2 shadow-lg flex items-center gap-2">
-            <div className="flex -space-x-2">
-              <Image
-                src="/assets/person-1.png"
-                alt="Reviewer"
-                width={40}
-                height={40}
-                className="rounded-full border-2 border-white"
-              />
-              <Image
-                src="/assets/person-2.png"
-                alt="Reviewer"
-                width={40}
-                height={40}
-                className="rounded-full border-2 border-white"
-              />
-              <Image
-                src="/assets/person-3.png"
-                alt="Reviewer"
-                width={40}
-                height={40}
-                className="rounded-full border-2 border-white"
-              />
+          <div className="absolute bottom-0 -right-12 max-lg:-bottom-10 bg-white rounded-lg px-4 py-2 shadow-lg flex items-center gap-2">
+            <div className="flex flex-col gap-5 ">
+              <div>
+                <span className="text-sm font-medium">Our Reviewers</span>
+              </div>
+              <div className="flex -space-x-2">
+                <Image
+                  src="/assets/person-1.png"
+                  alt="Reviewer"
+                  width={40}
+                  height={40}
+                  className="rounded-full border-2 border-white"
+                />
+                <Image
+                  src="/assets/person-2.png"
+                  alt="Reviewer"
+                  width={40}
+                  height={40}
+                  className="rounded-full border-2 border-white"
+                />
+                <Image
+                  src="/assets/person-3.png"
+                  alt="Reviewer"
+                  width={40}
+                  height={40}
+                  className="rounded-full border-2 border-white"
+                />
+              <div className="flex items-center bg-red-500 text-white rounded-full w-10 h-10 justify-center text-xs font-bold">
+                12+
+              </div>
+              </div>
             </div>
-            <div className="flex items-center bg-red-500 text-white rounded-full w-10 h-10 justify-center text-xs font-bold">
-              12+
-            </div>
-            <span className="text-sm font-medium">Our Reviewers</span>
           </div>
         </div>
 
