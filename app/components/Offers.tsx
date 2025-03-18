@@ -8,44 +8,108 @@ const Offers = () => {
   const [activeFilter, setActiveFilter] = useState("All")
   const carouselRef = useRef<HTMLDivElement>(null)
 
-  const filters = ["All", "Food", "Grocery", "Near me"]
+  const filters = ["All", "Food", "Car", "Near me"]
 
   const offers = [
     {
       id: 1,
       name: "Coco Coopa",
       category: "Food",
-      image: "/assets/shop-1.png",
+      image: "/assets/coco-coopa.png",
       promotion: "Get Upto 100% Cashback!",
     },
     {
       id: 2,
       name: "WinDex",
       category: "Car & Bike Wash",
-      image: "/assets/shop-1.png",
+      image: "/assets/windexx.jpg",
       promotion: "Get Upto 100% Cashback!",
     },
     {
       id: 3,
       name: "Momomia",
       category: "Food",
-      image: "/assets/shop-1.png",
+      image: "/assets/momomia.png",
       promotion: "Get Upto 100% Cashback!",
     },
     {
-      id: 4,
-      name: "Sample Store",
-      category: "Grocery",
-      image: "/assets/shop-1.png",
-      promotion: "Get Upto 100% Cashback!",
-    },
-    {
-      id: 5,
-      name: "Local Shop",
-      category: "Near me",
-      image: "/assets/shop-1.png",
-      promotion: "Get Upto 100% Cashback!",
-    },
+      "id": 4,
+      "name": "Auto Holix",
+      "category": "Car",
+      "image": "/assets/autoholix.jpg",
+      "promotion": "Get Upto 100% Cashback!"
+  },
+  {
+      "id": 5,
+      "name": "Burger Space",
+      "category": "Food",
+      "image": "/assets/burger-space.jpg",
+      "promotion": "Get Upto 100% Cashback!"
+  },
+  {
+      "id": 6,
+      "name": "Chickhut",
+      "category": "Food",
+      "image": "/assets/chickhut.jpg",
+      "promotion": "Get Upto 100% Cashback!"
+  },
+  {
+      "id": 7,
+      "name": "Chickos",
+      "category": "Food",
+      "image": "/assets/chickos.jpg",
+      "promotion": "Get Upto 100% Cashback!"
+  },
+  {
+      "id": 8,
+      "name": "Chicken Street",
+      "category": "Food",
+      "image": "/assets/chiken-street.jpg",
+      "promotion": "Get Upto 100% Cashback!"
+  },
+  {
+      "id": 9,
+      "name": "Dosa Express",
+      "category": "Food",
+      "image": "/assets/dosa.jpg",
+      "promotion": "Get Upto 100% Cashback!"
+  },
+  {
+      "id": 10,
+      "name": "Garam Matka",
+      "category": "Food",
+      "image": "/assets/garam-matka.jpg",
+      "promotion": "Get Upto 100% Cashback!"
+  },
+  {
+      "id": 11,
+      "name": "Grillax",
+      "category": "Food",
+      "image": "/assets/grillax.jpg",
+      "promotion": "Get Upto 100% Cashback!"
+  },
+  {
+      "id": 12,
+      "name": "Habibis",
+      "category": "Food",
+      "image": "/assets/habibis.jpg",
+      "promotion": "Get Upto 100% Cashback!"
+  },
+  {
+      "id": 13,
+      "name": "Hug a Mug",
+      "category": "Food",
+      "image": "/assets/hugmug.jpeg",
+      "promotion": "Get Upto 100% Cashback!"
+  },
+  {
+      "id": 14,
+      "name": "Wings a Things",
+      "category": "Food",
+      "image": "/assets/wings.jpg",
+      "promotion": "Get Upto 100% Cashback!"
+  }
+
   ]
 
   const filteredOffers =
@@ -118,17 +182,16 @@ const Offers = () => {
         >
           {filteredOffers.map((offer) => (
             <div key={offer.id} className="flex-none w-[280px] md:w-[320px] snap-start">
-              <div className="relative h-[240px] rounded-lg overflow-hidden group">
+              <div className="relative h-[340px] rounded-lg overflow-hidden group cursor-pointer">
                 <Image
                   src={offer.image || "/placeholder.svg"}
                   alt={offer.name}
                   fill
-                  className="object-cover transition-transform group-hover:scale-105"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex flex-col justify-end p-6">
+                  className="object-cover transition-transform group-hover:scale-105 ease-in-out duration-500 "                />
+    5          <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex flex-col justify-end p-6 ">
                   <h3 className="text-white text-xl font-bold mb-1">{offer.name}</h3>
                   <p className="text-yellow-300 font-medium mb-3">{offer.promotion}</p>
-                  <button className="flex items-center text-white text-sm font-medium">
+                  <button className="flex items-center text-white text-sm font-medium cursor-pointer">
                     Scan Now <ArrowRight className="ml-1 h-4 w-4" />
                   </button>
                 </div>

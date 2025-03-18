@@ -1,7 +1,18 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
+import { useState } from "react";
 
 export default function HeroSection() {
+  
+  const handleDownloadClick = () => {
+    window.open(
+      "https://play.google.com/store/search?q=near+wala&c=apps",
+      "_blank"
+    );
+  };
+
   return (
     <section className="w-full py-12 md:py-24 lg:py-32 bg-white">
       <div className="container padding-x mx-auto">
@@ -40,6 +51,9 @@ export default function HeroSection() {
               <Link
                 href="#"
                 className="inline-flex h-12 items-center justify-center rounded-full bg-red-600 px-8 text-sm font-medium text-white shadow transition-colors hover:bg-red-700 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-red-700"
+                onClick={() => {
+                  handleDownloadClick();
+                }}
               >
                 Download App
               </Link>
@@ -93,7 +107,7 @@ export default function HeroSection() {
           </div>
 
           {/* Right Column - App Screenshots */}
-          <div className="relative h-[400px] lg:h-[500px] w-full">
+          <div className="relative max-w-lg w-full">
             {/* Hero Image with Background */}
             <img
               src="/assets/hero-img-bg.png"
