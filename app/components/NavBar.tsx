@@ -43,7 +43,7 @@ export default function Navbar() {
         {" "}
         {/* Use custom padding classes */}
         {/* Logo */}
-        <Link href="/" className="flex items-center">
+        <div  className="flex items-center">
           <div className="flex items-center">
             <a href="#">
               <Image
@@ -55,7 +55,7 @@ export default function Navbar() {
               />
             </a>
           </div>
-        </Link>
+        </div>
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center space-x-8">
           <a
