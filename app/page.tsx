@@ -16,7 +16,7 @@ const page = () => {
       <Offers/>
       <Testimonials/>
       <DownloadApp/>
-      {/*<Footer/> */}
+      <Footer/>
     </div>
   )
 }

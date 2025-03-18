@@ -17,7 +17,7 @@ const DownloadApp = () => {
   };
 
   return (
-    <div className="padding-x padding-y">
+    <div className="padding-x padding-y" id="downloadapp">
       <div className="bg-orange-50  padding-x rounded-3xl max-w-7xl mx-auto overflow-hidden">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
           {/* Left side content */}
