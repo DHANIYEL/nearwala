@@ -30,7 +30,7 @@ export default function HeroSection() {
   };
 
   return (
-    <section className="w-full py-12 md:py-24 lg:py-32 bg-white">
+    <section className="w-full max-md:padding-y bg-white">
       <div className="container padding-x mx-auto max-w-7xl">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
           {/* Left Column - Text Content */}

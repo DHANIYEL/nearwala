@@ -85,7 +85,13 @@ export default function Navbar() {
             href="#offers"
             className="text-sm font-medium text-gray-600 hover:text-primary ease-in duration-200"
           >
-            OFFERS
+            SHOP NEAR ME
+          </a>
+          <a
+            href="#n-coins"
+            className="text-sm font-medium text-gray-600 hover:text-primary ease-in duration-200"
+          >
+            N CONIS
           </a>
           <a
             href="#testimonials"
@@ -140,7 +146,14 @@ export default function Navbar() {
                 className="text-lg font-medium text-gray-600 hover:text-primary transition-colors text-center"
                 onClick={() => setIsMenuOpen(false)}
               >
-                OFFERS
+                SHOP NEAR ME
+              </Link>
+              <Link
+                href="#n-coins"
+                className="text-lg font-medium text-gray-600 hover:text-primary transition-colors text-center"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                N COINS
               </Link>
               <Link
                 href="#testimonials"
