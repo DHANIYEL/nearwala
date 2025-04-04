@@ -30,7 +30,7 @@ const Testimonials = () => {
                 {" "}
                 {/* Slightly bigger than the background */}
                 <img
-                  src="/assets/testimonial-img.png"
+                  src="/assets/testimonial-image.png"
                   alt="App screenshot"
                   className="object-contain w-full h-full"
                 />

@@ -126,6 +126,7 @@ export default function NCoinsSection() {
             <div className="relative w-full max-w-md aspect-square">
               <Image
                 src="/assets/n-coin-img1.jpg" // Replace with your actual image path
+                // src="/assets/Coins-01.png" // Replace with your actual image path
                 alt="N-Coins Illustration"
                 fill
                 className="object-contain rounded-lg"

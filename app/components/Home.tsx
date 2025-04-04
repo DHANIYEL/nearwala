@@ -56,14 +56,14 @@ export default function HeroSection() {
             {/* Heading */}
             <div className="space-y-2">
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tighter">
-                Your Ultimate <br /> 
-                All-time
-                 Discount App for{" "}
+                Your Ultimate <br />
+                All-time Discount App for{" "}
                 <span className="text-red-600">Everyday Savings</span>
               </h1>
               <p className="max-w-[600px] text-gray-700 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-              At Nearwala, our mission is to fill your wallet with savings by offering exclusive discounts on
-              every local purchase. Enjoy discounts of up to 100% at your favorite neighborhood stores
+                At Nearwala, our mission is to fill your wallet with savings by
+                offering exclusive discounts on every local purchase. Enjoy
+                discounts of up to 100% at your favorite neighborhood stores
               </p>
             </div>
 
@@ -136,7 +136,7 @@ export default function HeroSection() {
           >
             {/* Hero Image with Background */}
             <img
-              src="/assets/hero-img-bg.png"
+              src="/assets/home-image.png"
               alt="Hero Image with Background"
               className="w-full h-full object-contain"
             />

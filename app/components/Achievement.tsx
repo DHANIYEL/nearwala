@@ -23,14 +23,14 @@ const Achievement = () => {
 
           {/* Content Container */}
           <div className="relative z-10 max-w-7xl mx-auto px-4 py-12 sm:px-6 lg:px-8">
-            <div className="text-center mb-12">
+            <div className="text-center  mb-12">
               <h2 className="text-4xl font-bold text-white mb-4">
                 Why <span className="text-primary">Nearwala</span> Stands Out
               </h2>
               <p className="text-lg text-white max-w-3xl mx-auto">
                 Transforming Local Shopping with Unbeatable Savings
               </p>
-              <p className="text-lg text-white/90 max-w-3xl mx-auto mt-4">
+              <p className="text-lg text-white/90 max-sm:text-start max-w-3xl mx-auto mt-4">
                 We're revolutionizing neighborhood commerce by connecting
                 shoppers with incredible deals. Our platform empowers both
                 consumers and local businesses through mutually beneficial
