@@ -74,7 +74,7 @@ export default function Navbar() {
           </div>
         </div>
         {/* Desktop Navigation */}
-        <nav className="hidden md:flex items-center space-x-8">
+        <nav className="hidden lg:flex items-center space-x-8">
           <a
             href="#how-it-works"
             className="text-sm font-medium text-gray-600 hover:text-primary ease-in duration-200"
@@ -101,7 +101,7 @@ export default function Navbar() {
           </a>
         </nav>
         {/* Download Button */}
-        <div className="hidden md:block">
+        <div className="hidden lg:block">
           <Link
             href="#"
             onClick={(e) => {
@@ -116,7 +116,7 @@ export default function Navbar() {
         </div>
         {/* Mobile Menu Button */}
         <button
-          className="md:hidden"
+          className="lg:hidden"
           onClick={() => setIsMenuOpen(!isMenuOpen)}
         >
           {isMenuOpen ? <X size={24} /> : <Menu size={24} />}

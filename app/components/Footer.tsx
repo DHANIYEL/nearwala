@@ -18,7 +18,7 @@ const Footer = () => {
     window.open("https://x.com/nearwala", "_blank");
   };
   return (
-    <footer className="py-10 padding-y padding-x">
+    <footer className="py-10 padding-y padding-x" id="footer">
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
           {/* Logo and description column */}
@@ -92,11 +92,8 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
-                <Link
-                  href="#testimonials"
-                  className="text-gray-600 hover:text-gray-900"
-                >
-                  Reviewers
+                <Link href="#footer" className="text-gray-600 hover:text-gray-900">
+                  Support
                 </Link>
               </li>
               <li>
@@ -115,23 +112,23 @@ const Footer = () => {
             <h3 className="font-bold text-lg mb-4">Company</h3>
             <ul className="space-y-3">
               <li>
-                <Link href="#" className="text-gray-600 hover:text-gray-900">
-                  Why Nearwala?
+                <Link href="/privacy-policy" className="text-gray-600 hover:text-gray-900">
+                  Privacy Policy
                 </Link>
               </li>
               <li>
-                <Link href="#" className="text-gray-600 hover:text-gray-900">
-                  Partner With Us
+                <Link href="/refund-policy" className="text-gray-600 hover:text-gray-900">
+                  Refund Policy
                 </Link>
               </li>
               <li>
-                <Link href="#" className="text-gray-600 hover:text-gray-900">
+                <Link href="/terms-conditions" className="text-gray-600 hover:text-gray-900">
+                  Terms & Conditions{" "}
+                </Link>
+              </li>
+              <li>
+                <Link href="/faq" className="text-gray-600 hover:text-gray-900">
                   FAQ
-                </Link>
-              </li>
-              <li>
-                <Link href="#" className="text-gray-600 hover:text-gray-900">
-                  Blog
                 </Link>
               </li>
             </ul>
