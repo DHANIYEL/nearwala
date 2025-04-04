@@ -45,7 +45,7 @@ const LaunchingSoon = () => {
       <div className="container px-4 mx-auto">
         {/* Section Header */}
         <div className="flex flex-col  md:items-center md:justify-between mb-8">
-          <div className="">
+          <div className="text-center">
             <h2 className="text-2xl max-sm:text-xl text-center md:text-3xl font-bold inline-flex items-center justify-center gap-2">
               Launching Soon In <span className="text-3xl">🚀</span>
             </h2>

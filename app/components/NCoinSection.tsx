@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 export default function NCoinsSection() {
   const handleDownloadClick = () => {
     // Detect if the user is on an Android device
@@ -116,7 +117,9 @@ export default function NCoinsSection() {
                 Add N-Coins Now
               </button>
               <button className="px-6 py-3 bg-white hover:bg-gray-100 cursor-pointer text-primary font-medium rounded-lg shadow-sm border border-indigo-100 transition duration-200">
+                <Link href="/about">
                 Learn More
+                </Link>
               </button>
             </div>
           </div>
