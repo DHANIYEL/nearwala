@@ -1,26 +1,28 @@
-import React from 'react'
-import NavBar from './components/NavBar'
-import Home from './components/Home'
-import OurServices from './components/OurServices'
-import Offers from './components/Offers'
-import Testimonials from './components/Testimonials'
-import DownloadApp from './components/DownloadApp'
-import Footer from './components/Footer'
-import DiscountPopup from './components/DiscountPopup'
+import React from "react";
+import NavBar from "./components/NavBar";
+import Home from "./components/Home";
+import OurServices from "./components/OurServices";
+import Offers from "./components/Offers";
+import Testimonials from "./components/Testimonials";
+import DownloadApp from "./components/DownloadApp";
+import Footer from "./components/Footer";
+import DiscountPopup from "./components/DiscountPopup";
+import Achievement from "./components/Achievement";
 
 const page = () => {
   return (
     <div>
-      <NavBar/>
-       <Home/>
-      <OurServices/>
-      <Offers/>
-      <Testimonials/>
-      <DownloadApp/>
-      <Footer/>
+      <NavBar />
+      <Home />
+      <Achievement />
+      <OurServices />
+      <Offers />
+      <Testimonials />
+      <DownloadApp />
+      <Footer />
       <DiscountPopup />
     </div>
-  )
-}
+  );
+};
 
-export default page
+export default page;

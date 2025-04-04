@@ -8,16 +8,17 @@ export default function HeroSection() {
   const handleDownloadClick = () => {
     // Detect if the user is on an Android device
     const isAndroid = /Android/i.test(navigator.userAgent);
-  
+
     // Detect if the user is on an iOS device
     const isIOS = /iPhone|iPad|iPod/i.test(navigator.userAgent);
-  
+
     // Play Store link for Android
-    const playStoreLink = "https://play.google.com/store/search?q=near+wala&c=apps";
-  
+    const playStoreLink =
+      "https://play.google.com/store/search?q=near+wala&c=apps";
+
     // App Store link for iOS
     const appStoreLink = "https://apps.apple.com/in/app/nearwala/id1576686708"; // Replace with your actual App Store link
-  
+
     // Redirect based on the device
     if (isAndroid) {
       window.open(playStoreLink, "_blank");
@@ -31,7 +32,7 @@ export default function HeroSection() {
 
   return (
     <section className="w-full max-md:padding-y bg-white">
-      <div className="container padding-x mx-auto max-w-7xl">
+      <div className="container padding-x padding-y mx-auto max-w-7xl">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
           {/* Left Column - Text Content */}
           <motion.div
@@ -55,13 +56,14 @@ export default function HeroSection() {
             {/* Heading */}
             <div className="space-y-2">
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tighter">
-                Your All-Time <br />
-                Discount App for <br />
+                Your Ultimate <br /> 
+                All-time
+                 Discount App for{" "}
                 <span className="text-red-600">Everyday Savings</span>
               </h1>
               <p className="max-w-[600px] text-gray-700 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                Our mission is to fill your wallet with savings and bring you
-                exclusive discounts on every local purchase.
+              At Nearwala, our mission is to fill your wallet with savings by offering exclusive discounts on
+              every local purchase. Enjoy discounts of up to 100% at your favorite neighborhood stores
               </p>
             </div>
 
