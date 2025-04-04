@@ -4,8 +4,8 @@ import React from "react";
 const Achievement = () => {
   return (
     <div>
-      <div className="flex justify-center padding-y">
-        <section className="padding-x  max-w-7xl mx-auto rounded-xl w-full bg-gray-100 relative overflow-hidden">
+      <div className="flex justify-center padding-x padding-y mx-auto">
+        <section className="padding-x  max-w-7xl  rounded-xl w-full bg-gray-100 relative overflow-hidden">
           {/* Background Image - Using local image */}
           <div className="absolute inset-0">
             <Image

@@ -25,7 +25,7 @@ const OurServices = () => {
   ];
 
   return (
-    <section className="w-full  padding-y bg-white" id="how-it-works">
+    <section className="w-full padding-y bg-white" id="how-it-works">
       <div className="container padding-x mx-auto">
         {/* Section Header */}
         <motion.div
@@ -35,31 +35,71 @@ const OurServices = () => {
           transition={{ duration: 0.8, ease: "easeOut" }}
         >
           <h3 className="text-red-600 font-medium uppercase tracking-wider mb-4">
-            WHAT WE BRING TO YOU
+            HOW IT WORKS
           </h3>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold max-w-3xl mx-auto">
-            Your Go-To Discount App for Everyday Savings
+            How Nearwala Works for You
           </h2>
         </motion.div>
 
-        {/* Services Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16">
-          {services.map((service, index) => (
-            <motion.div key={index} className="flex flex-col items-center text-center"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 100 }}
-            transition={{ duration: 1, ease: "easeOut" }}
+        {/* Steps Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-16">
+          {[
+            {
+              step: "1",
+              title: "Download the App",
+              description: "Available on both Android and iOS platforms",
+              icon: "/download-icon.svg", // Replace with your icon path
+            },
+            {
+              step: "2",
+              title: "Get Your N-Coins",
+              description: "Add N-Coins to your wallet to unlock discounts",
+              icon: "/wallet-icon.svg",
+            },
+            {
+              step: "3",
+              title: "Explore Local Shops",
+              description: "Browse shops in your preferred categories",
+              icon: "/explore-icon.svg",
+            },
+            {
+              step: "4",
+              title: "Make Your Purchase",
+              description: "Shop at your chosen local store",
+              icon: "/cart-icon.svg",
+            },
+            {
+              step: "5",
+              title: "Scan QR Code",
+              description: "Use the app to scan the shop's QR code for payment",
+              icon: "/qr-icon.svg",
+            },
+            {
+              step: "6",
+              title: "Enjoy Your Discount",
+              description: "Avail discounts of up to 100% on your bill",
+              icon: "/discount-icon.svg",
+            },
+          ].map((step, index) => (
+            <motion.div
+              key={index}
+              className="flex flex-col items-center text-center bg-primary/10 p-8 rounded-xl shadow-sm hover:shadow-md transition-shadow"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 100, y: 0 }}
+              transition={{
+                duration: 0.5,
+                delay: index * 0.1,
+                ease: "easeOut",
+              }}
             >
-              <div className="mb-6 h-[150px] w-[150px] relative">
-                <Image
-                  src={service.image || "/placeholder.svg"}
-                  alt={service.title}
-                  fill
-                  className="object-contain"
-                />
+              <div className="mb-6 h-16 w-16 rounded-full bg-red-200 flex items-center justify-center">
+                <span className="text-red-600 text-2xl font-bold">
+                  {step.step}
+                </span>
               </div>
-              <h3 className="text-xl font-bold mb-3">{service.title}</h3>
-              <p className="text-gray-600 max-w-xs">{service.description}</p>
+              <h3 className="text-xl font-bold mb-3">{step.title}</h3>
+              <p className="text-gray-600">{step.description}</p>
             </motion.div>
           ))}
         </div>
