@@ -8,6 +8,7 @@ import DownloadApp from "./components/DownloadApp";
 import Footer from "./components/Footer";
 import DiscountPopup from "./components/DiscountPopup";
 import Achievement from "./components/Achievement";
+import NCoinsSection from "./components/NCoinSection";
 
 const page = () => {
   return (
@@ -16,6 +17,7 @@ const page = () => {
       <Home />
       <Achievement />
       <OurServices />
+      <NCoinsSection />
       <Offers />
       <Testimonials />
       <DownloadApp />

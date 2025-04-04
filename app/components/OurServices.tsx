@@ -84,7 +84,7 @@ const OurServices = () => {
           ].map((step, index) => (
             <motion.div
               key={index}
-              className="flex flex-col items-center text-center bg-primary/10 p-8 rounded-xl shadow-sm hover:shadow-md transition-shadow"
+              className="flex flex-col items-center text-center bg-primary/10 p-8 rounded-xl shadow-sm hover:shadow-lg transition-shadow"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 100, y: 0 }}
               transition={{

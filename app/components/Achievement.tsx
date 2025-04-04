@@ -5,7 +5,7 @@ const Achievement = () => {
   return (
     <div>
       <div className="flex justify-center padding-x padding-y mx-auto">
-        <section className="padding-x  max-w-7xl  rounded-xl w-full bg-gray-100 relative overflow-hidden">
+        <section className="padding-x  max-w-7xl mx-auto  rounded-xl w-full bg-gray-100 relative overflow-hidden">
           {/* Background Image - Using local image */}
           <div className="absolute inset-0">
             <Image
@@ -22,7 +22,7 @@ const Achievement = () => {
           <div className="absolute inset-0 bg-black opacity-40"></div>
 
           {/* Content Container */}
-          <div className="relative z-10 max-w-6xl mx-auto px-4 py-12 sm:px-6 lg:px-8">
+          <div className="relative z-10 max-w-7xl mx-auto px-4 py-12 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
               <h2 className="text-4xl font-bold text-white mb-4">
                 Why <span className="text-primary">Nearwala</span> Stands Out
