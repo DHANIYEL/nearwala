@@ -215,10 +215,9 @@ const Offers = () => {
         {/* Section Header */}
         <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-8">
           <div>
-            <h3 className="text-red-600 font-medium uppercase tracking-wider mb-2">EXCLUSIVE OFFERS</h3>
-            <h2 className="text-3xl md:text-4xl font-bold">
-              Savings That Will Make
-              <br className="hidden md:block" /> You Smile
+            <h3 className="text-red-600 font-medium text-xl uppercase tracking-wider mb-2">Personalized Discount from Your Favorite Retailers</h3>
+            <h2 className="text-lg md:text-xl text-gray-600 font-bold max-w-lg">
+            Discover discount-available shops nearby across various categories 
             </h2>
           </div>
 
