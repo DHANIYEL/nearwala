@@ -1,15 +1,12 @@
-"use client"
+"use client";
 
-import Image from "next/image"
-import Link from "next/link"
-import { Instagram, Facebook, Twitter } from "lucide-react"
+import Image from "next/image";
+import Link from "next/link";
+import { Instagram, Facebook, Twitter } from "lucide-react";
 
 const Footer = () => {
   const OpenInstagram = () => {
-    window.open(
-      "https://www.instagram.com/nearwalaglobal/?hl=en",
-      "_blank"
-    );
+    window.open("https://www.instagram.com/nearwalaglobal/?hl=en", "_blank");
   };
   const OpenFacebook = () => {
     window.open(
@@ -18,10 +15,7 @@ const Footer = () => {
     );
   };
   const OpenTwitter = () => {
-    window.open(
-      "https://x.com/nearwala",
-      "_blank"
-    );
+    window.open("https://x.com/nearwala", "_blank");
   };
   return (
     <footer className="py-10 padding-y padding-x">
@@ -30,34 +24,51 @@ const Footer = () => {
           {/* Logo and description column */}
           <div className="lg:col-span-2">
             <div className="flex items-center mb-6">
-          <div className="flex items-center">
-          <a href="#">
-            <Image
-              src="/assets/NW-LOGO.png"
-              alt="Nearwala Logo"
-              width={130}
-              height={80}
-              className="object-contain cursor-pointer"
-            />
-            </a>
-          </div>
+              <div className="flex items-center">
+                <a href="#">
+                  <Image
+                    src="/assets/NW-LOGO.png"
+                    alt="Nearwala Logo"
+                    width={130}
+                    height={80}
+                    className="object-contain cursor-pointer"
+                  />
+                </a>
+              </div>
             </div>
 
             <p className="text-gray-600 mb-6 max-w-md">
-              Our job is to fill your wallet with savings and bring you unbeatable discounts on every local purchase.
+              Our job is to fill your wallet with savings and bring you
+              unbeatable discounts on every local purchase.
             </p>
 
             <div className="flex space-x-4">
-              <Link href="#" onClick={OpenInstagram} className="bg-red-500 text-white p-2 rounded-md hover:bg-red-600 transition-colors">
+              <Link
+                href="#"
+                onClick={OpenInstagram}
+                className="bg-red-500 text-white p-2 rounded-md hover:bg-red-600 transition-colors"
+              >
                 <Instagram size={20} />
               </Link>
-              <Link href="#" onClick={OpenFacebook} className="bg-red-500 text-white p-2 rounded-md hover:bg-red-600 transition-colors">
+              <Link
+                href="#"
+                onClick={OpenFacebook}
+                className="bg-red-500 text-white p-2 rounded-md hover:bg-red-600 transition-colors"
+              >
                 <Facebook size={20} />
               </Link>
-              <Link href="#" onClick={OpenTwitter} className="bg-red-500 text-white p-2 rounded-md hover:bg-red-600 transition-colors">
+              <Link
+                href="#"
+                onClick={OpenTwitter}
+                className="bg-red-500 text-white p-2 rounded-md hover:bg-red-600 transition-colors"
+              >
                 <Twitter size={20} />
               </Link>
             </div>
+
+            <p className="text-gray-600 mt-3 font-semibold max-sm:text-sm max-w-md">
+              © 2025 by NearPay Innovations Pvt Ltd
+            </p>
           </div>
 
           {/* About column */}
@@ -65,22 +76,34 @@ const Footer = () => {
             <h3 className="font-bold text-lg mb-4">About</h3>
             <ul className="space-y-3">
               <li>
-                <Link href="#" className="text-gray-600 hover:text-gray-900">
+                <Link
+                  href="/about"
+                  className="text-gray-600 hover:text-gray-900"
+                >
                   About Us
                 </Link>
               </li>
               <li>
-                <Link href="#downloadapp" className="text-gray-600 hover:text-gray-900">
+                <Link
+                  href="#downloadapp"
+                  className="text-gray-600 hover:text-gray-900"
+                >
                   Features
                 </Link>
               </li>
               <li>
-                <Link href="#testimonials" className="text-gray-600 hover:text-gray-900">
-                Reviewers
+                <Link
+                  href="#testimonials"
+                  className="text-gray-600 hover:text-gray-900"
+                >
+                  Reviewers
                 </Link>
               </li>
               <li>
-                <Link href="#offers" className="text-gray-600 hover:text-gray-900">
+                <Link
+                  href="#offers"
+                  className="text-gray-600 hover:text-gray-900"
+                >
                   Offers
                 </Link>
               </li>
@@ -158,8 +181,7 @@ const Footer = () => {
         </div>
       </div>
     </footer>
-  )
-}
+  );
+};
 
-export default Footer
-
+export default Footer;
