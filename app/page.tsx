@@ -10,6 +10,7 @@ import DiscountPopup from "./components/DiscountPopup";
 import Achievement from "./components/Achievement";
 import NCoinsSection from "./components/NCoinSection";
 import Location from "./components/Location";
+import LaunchingSoon from "./components/LaunchingSoon";
 
 const page = () => {
   return (
@@ -21,6 +22,7 @@ const page = () => {
       <NCoinsSection />
       <Offers />
       <Location />
+      <LaunchingSoon />
       <Testimonials />
       <DownloadApp />
       <Footer />

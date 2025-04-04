@@ -6,33 +6,39 @@ const Location = () => {
   const locations = [
     {
       name: "Bengaluru",
+      state: "Karnataka",
       image: "/assets/Bengaluru.avif",
       description: "Our main office",
     },
     {
       name: "Hyderabad",
+      state: "Telangana",
       image: "/assets/Hyderabad.jpeg",
       description: "Tech hub location",
     },
     {
       name: "Kochi",
+      state: "Kerala",
       image: "/assets/kochi.jpg",
       description: "Coastal branch",
     },
     {
       name: "Calicut",
+      state: "Kerala",
       image: "/assets/kozhikode.jpg",
       description: "Northern office",
     },
     {
       name: "Coimbatore",
+      state: "Tamil Nadu",
       image: "/assets/coimbatore.webp",
       description: "Southern branch",
     },
-  ]
+]
+  
 
   return (
-    <div className="container mx-auto px-4 py-12">
+    <div className="container mx-auto padding-x padding-y">
       <div className="mb-8 text-center">
         <h2 className="text-2xl md:text-3xl font-bold inline-flex items-center justify-center gap-2">
           Find Us In <span className="text-3xl">📍</span>
@@ -55,7 +61,7 @@ const Location = () => {
               {/* Content overlay */}
               <div className="absolute inset-0 p-4 flex flex-col justify-between">
                 <div className="flex justify-between items-start">
-                  <span className="text-xs font-medium bg-white/90 text-gray-800 px-2 py-1 rounded-full">Location</span>
+                  <span className="text-xs font-medium bg-white/90 text-gray-800 px-2 py-1 rounded-full">{location.state}</span>
                   <button className="w-8 h-8 bg-white rounded-full flex items-center justify-center shadow-md hover:bg-gray-100 transition-colors">
                     <ArrowRight className="w-4 h-4 text-gray-800" />
                   </button>
