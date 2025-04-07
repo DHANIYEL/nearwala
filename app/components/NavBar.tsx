@@ -64,7 +64,7 @@ export default function Navbar() {
           <div className="flex items-center">
             <a href="#">
               <Image
-                src="/assets/NW-LOGO.png"
+                src="/assets/NW-LOGO-1.jpg"
                 alt="Nearwala Logo"
                 width={130}
                 height={80}

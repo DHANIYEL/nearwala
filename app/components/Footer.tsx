@@ -27,9 +27,9 @@ const Footer = () => {
               <div className="flex items-center">
                 <a href="#">
                   <Image
-                    src="/assets/NW-LOGO.png"
+                    src="/assets/NW-LOGO-1.jpg"
                     alt="Nearwala Logo"
-                    width={130}
+                    width={150}
                     height={80}
                     className="object-contain cursor-pointer"
                   />
