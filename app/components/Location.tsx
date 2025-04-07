@@ -41,7 +41,7 @@ const Location = () => {
     <div className="container mx-auto padding-x padding-y">
       <div className="mb-8 text-center">
         <h2 className="text-2xl md:text-3xl font-bold inline-flex items-center justify-center gap-2">
-          We Are In <span className="text-3xl">📍</span>
+          We Are In {locations.length} Cities<span className="text-3xl">📍</span>
         </h2>
         <p className="mt-2 text-gray-600">Visit us in these beautiful cities</p>
       </div>
