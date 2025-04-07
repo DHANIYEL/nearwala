@@ -1,11 +1,16 @@
-"use client"
+"use client";
 
-import { useState, useRef } from "react"
-import Image from "next/image"
-import { ChevronLeft, ChevronRight, ArrowRight } from "lucide-react"
+import { useState, useRef } from "react";
+import Image from "next/image";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 
 // Helper function to calculate distance between two coordinates (Haversine formula)
-const calculateDistance = (lat1: number, lon1: number, lat2: number, lon2: number) => {
+const calculateDistance = (
+  lat1: number,
+  lon1: number,
+  lat2: number,
+  lon2: number
+) => {
   const R = 6371; // Radius of the Earth in km
   const dLat = (lat2 - lat1) * (Math.PI / 180);
   const dLon = (lon2 - lon1) * (Math.PI / 180);
@@ -21,15 +26,20 @@ const calculateDistance = (lat1: number, lon1: number, lat2: number, lon2: numbe
 
 const Offers = () => {
   const [activeFilter, setActiveFilter] = useState("All");
-  const [userLocation, setUserLocation] = useState<{ lat: number; lon: number } | null>(null);
+  const [userLocation, setUserLocation] = useState<{
+    lat: number;
+    lon: number;
+  } | null>(null);
   const carouselRef = useRef<HTMLDivElement>(null);
 
   const filters = ["All", "Food", "Car", "Near me"];
 
   const handleDownloadClick = () => {
-    window.open("https://play.google.com/store/search?q=near+wala&c=apps", "_blank");
+    window.open(
+      "https://play.google.com/store/search?q=near+wala&c=apps",
+      "_blank"
+    );
   };
-
 
   type Offer = {
     id: number;
@@ -41,7 +51,7 @@ const Offers = () => {
     distance?: number; // Optional property for distance
   };
   // Add location data to each shop
-  const offers : Offer[] = [
+  const offers: Offer[] = [
     {
       id: 1,
       name: "Coco Coopa",
@@ -169,7 +179,9 @@ const Offers = () => {
         },
         (error) => {
           console.error("Error getting user location:", error);
-          alert("Unable to retrieve your location. Please enable location permissions.");
+          alert(
+            "Unable to retrieve your location. Please enable location permissions."
+          );
         }
       );
     } else {
@@ -215,9 +227,11 @@ const Offers = () => {
         {/* Section Header */}
         <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-8">
           <div>
-            <h3 className="text-red-600 font-medium text-xl uppercase tracking-wider mb-2">Personalized Discount from Your Favorite Retailers</h3>
+            <h3 className="text-red-600 font-medium text-xl uppercase tracking-wider mb-2">
+              Personalized Discount from Your Favorite Retailers
+            </h3>
             <h2 className="text-lg md:text-xl text-gray-600 font-bold max-w-lg">
-            Discover discount-available shops nearby across various categories 
+              Discover discount-available shops nearby across various categories
             </h2>
           </div>
 
@@ -245,9 +259,15 @@ const Offers = () => {
           {filters.map((filter) => (
             <button
               key={filter}
-              onClick={() => filter === "Near me" ? handleNearMeClick() : setActiveFilter(filter)}
+              onClick={() =>
+                filter === "Near me"
+                  ? handleNearMeClick()
+                  : setActiveFilter(filter)
+              }
               className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
-                activeFilter === filter ? "bg-red-600 text-white" : "bg-gray-200 text-gray-800 hover:bg-gray-300"
+                activeFilter === filter
+                  ? "bg-red-600 text-white"
+                  : "bg-gray-200 text-gray-800 hover:bg-gray-300"
               }`}
             >
               {filter}
@@ -261,32 +281,72 @@ const Offers = () => {
           className="flex overflow-x-auto pb-6 -mx-4 px-4 space-x-6 scrollbar-hide snap-x"
           style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
         >
-          {filteredOffers.map((offer) => (
-            <div key={offer.id} className="flex-none max-sm:w-[240px] max-sm:h-[280px] w-[280px] h-[380px] md:w-[320px] snap-start">
-              <div className="relative h-full rounded-lg overflow-hidden group cursor-pointer"
-                onClick={() => {
-                  handleDownloadClick();
-                }}
+          {filteredOffers.map((offer) => {
+            // Define an array of different gradient colors
+            const colorSchemes = [
+              "bg-gradient-to-b from-pink-100 to-pink-200",
+              "bg-gradient-to-b from-purple-100 to-purple-200",
+              "bg-gradient-to-b from-blue-100 to-blue-200",
+              "bg-gradient-to-b from-green-100 to-green-200",
+              "bg-gradient-to-b from-yellow-100 to-yellow-200",
+              "bg-gradient-to-b from-red-100 to-red-200",
+              "bg-gradient-to-b from-indigo-100 to-indigo-200",
+              "bg-gradient-to-b from-teal-100 to-teal-200", // Tailwind v3 doesn't include teal by default
+            ];
+            
+
+            // Select color based on offer id or index
+            const colorClass = colorSchemes[offer.id % colorSchemes.length];
+
+            return (
+              <div
+                key={offer.id}
+                className="flex-none max-sm:w-[240px] max-sm:h-[280px] w-[280px] h-[340px] md:w-[320px] snap-start"
               >
-                <Image
-                  src={offer.image || "/placeholder.svg"}
-                  alt={offer.name}
-                  fill
-                  className="object-cover transition-transform group-hover:scale-105 ease-in-out duration-500"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex flex-col justify-end p-6">
-                  <h3 className="text-white text-xl font-bold mb-1">{offer.name}</h3>
-                  <p className="text-yellow-300 font-medium mb-3">{offer.promotion}</p>
+                <div
+                  className={`relative h-full rounded-2xl overflow-hidden group cursor-pointer hover:shadow-lg transition-all duration-300 ${colorClass}`}
+                  onClick={() => {
+                    handleDownloadClick();
+                  }}
+                >
+                  {/* Circular logo container */}
+                  <div className="absolute top-0 left-0 w-full flex justify-center pt-8">
+                    <div className="w-24 h-24 rounded-full bg-white flex items-center justify-center shadow-md">
+                      <Image
+                        src={offer.image || "/placeholder.svg"}
+                        alt={offer.name}
+                        width={80}
+                        height={80}
+                        className="rounded-full object-cover"
+                      />
+                    </div>
+                  </div>
+
+                  {/* Offer name */}
+                  <div className="absolute top-36 left-0 w-full text-center">
+                    <h3 className="text-black/70 text-xl font-bold">
+                      {offer.name}
+                    </h3>
+                  </div>
+
+                  {/* Offer details at bottom */}
+                  <div className="absolute bottom-0 left-0 w-full">
+                    <div className="bg-white mx-4 mb-4 py-2 rounded-lg text-center">
+                      <p className="font-bold text-gray-800">
+                        {offer.promotion}
+                      </p>
+                    </div>
+                  </div>
+
                   {activeFilter === "Near me" && (
-                    <p className="text-white text-sm">Distance: {offer.distance?.toFixed(2)} km</p>
+                    <p className="absolute bottom-16 w-full text-center text-white text-sm">
+                      Distance: {offer.distance?.toFixed(2)} km
+                    </p>
                   )}
-                  <button className="flex items-center text-white text-sm font-medium cursor-pointer">
-                    Scan Now <ArrowRight className="ml-1 h-4 w-4" />
-                  </button>
                 </div>
               </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
       </div>
     </section>
