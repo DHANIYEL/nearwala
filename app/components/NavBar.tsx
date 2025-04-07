@@ -66,7 +66,7 @@ export default function Navbar() {
               <Image
                 src="/assets/NW-LOGO-1.jpg"
                 alt="Nearwala Logo"
-                width={130}
+                width={150}
                 height={80}
                 className="object-contain"
               />
@@ -91,7 +91,7 @@ export default function Navbar() {
             href="#n-coins"
             className="text-sm font-medium text-gray-600 hover:text-primary ease-in duration-200"
           >
-            N CONIS
+            N COINS
           </a>
           <a
             href="#testimonials"

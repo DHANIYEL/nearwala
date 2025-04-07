@@ -56,7 +56,6 @@ export default function HeroSection() {
             {/* Heading */}
             <div className="space-y-2">
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tighter">
-                Your Ultimate <br />
                 All-time Discount App for{" "}
                 <span className="text-red-600">Everyday Savings</span>
               </h1>
