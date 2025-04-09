@@ -80,7 +80,7 @@ const Offers = () => {
       id: 4,
       name: "Auto Holix",
       category: "Car",
-      image: "/assets/autoholix.jpg",
+      image: "/assets/Autoholix.jpg",
       promotion: "Get Upto 100% Cashback!",
       location: { lat: 11.2593, lon: 75.7798 }, // Kozhikode, Kerala
     },
@@ -88,7 +88,7 @@ const Offers = () => {
       id: 5,
       name: "Burger Space",
       category: "Food",
-      image: "/assets/burger-space.jpg",
+      image: "/assets/Burger-space.jpg",
       promotion: "Get Upto 100% Cashback!",
       location: { lat: 11.2612, lon: 75.7831 }, // Kozhikode, Kerala
     },
@@ -96,7 +96,7 @@ const Offers = () => {
       id: 6,
       name: "Chickhut",
       category: "Food",
-      image: "/assets/chickhut.jpg",
+      image: "/assets/Chickhut.jpg",
       promotion: "Get Upto 100% Cashback!",
       location: { lat: 11.2567, lon: 75.7809 }, // Kozhikode, Kerala
     },
@@ -160,7 +160,7 @@ const Offers = () => {
       id: 14,
       name: "Wings a Things",
       category: "Food",
-      image: "/assets/wings.jpg",
+      image: "/assets/Wings.jpg",
       promotion: "Get Upto 100% Cashback!",
       location: { lat: 11.2609, lon: 75.7819 }, // Kozhikode, Kerala
     },
@@ -339,7 +339,7 @@ const Offers = () => {
                   </div>
 
                   {activeFilter === "Near me" && (
-                    <p className="absolute bottom-16 w-full text-center text-white text-sm">
+                    <p className="absolute bottom-16 w-full text-center text-primary/50 font-semibold text-sm">
                       Distance: {offer.distance?.toFixed(2)} km
                     </p>
                   )}
