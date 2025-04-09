@@ -1,105 +1,105 @@
 "use client";
 
-import Image from "next/image";
 import { motion } from "framer-motion";
 
 const OurServices = () => {
-  const services = [
+  const steps = [
     {
-      title: "Easy To Save",
-      description:
-        "Saving is simple! Just a few steps to unlock exclusive discounts on your local purchases.",
-      image: "/assets/service-1.png",
+      step: "1",
+      title: "Download the App",
+      description: "Available on both Android and iOS platforms",
     },
     {
-      title: "Instant Discounts",
-      description:
-        "Get discounts applied immediately at checkout - no waiting required.",
-      image: "/assets/service-2.png",
+      step: "2",
+      title: "Get Your N-Coins",
+      description: "Add N-Coins to your wallet to unlock discounts",
     },
     {
-      title: "Trusted Quality",
-      description: "We ensure the best discounts from trusted local shops.",
-      image: "/assets/service-3.png",
+      step: "3",
+      title: "Explore Local Shops",
+      description: "Browse shops in your preferred categories",
+    },
+    {
+      step: "4",
+      title: "Make Your Purchase",
+      description: "Shop at your chosen local store",
+    },
+    {
+      step: "5",
+      title: "Scan QR Code",
+      description: "Use the app to scan the shop's QR code for payment",
+    },
+    {
+      step: "6",
+      title: "Enjoy Your Discount",
+      description: "Avail discounts of up to 100% on your bill",
     },
   ];
 
   return (
-    <section className="w-full padding-y bg-white" id="how-it-works">
-      <div className="container padding-x mx-auto">
+    <section className="w-full py-20 bg-white" id="how-it-works">
+      <div className="container px-6 mx-auto max-w-7xl">
         {/* Section Header */}
         <motion.div
-          className="text-center mb-12"
-          initial={{ opacity: 0, y: -50 }}
-          animate={{ opacity: 100, y: 0 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
+          className="text-center mb-16"
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
         >
-          <h3 className="text-red-600 font-medium uppercase tracking-wider mb-4">
-            HOW IT WORKS
-          </h3>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold max-w-3xl mx-auto">
-            How Nearwala Works for You
+          <span className="text-sm font-medium tracking-widest text-red-600 mb-2 block">
+            SIMPLE STEPS
+          </span>
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
+            How Nearwala Works
           </h2>
+          <div className="w-20 h-1 bg-red-600 mx-auto mt-4"></div>
         </motion.div>
 
         {/* Steps Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-16">
-          {[
-            {
-              step: "1",
-              title: "Download the App",
-              description: "Available on both Android and iOS platforms",
-              icon: "/download-icon.svg", // Replace with your icon path
-            },
-            {
-              step: "2",
-              title: "Get Your N-Coins",
-              description: "Add N-Coins to your wallet to unlock discounts",
-              icon: "/wallet-icon.svg",
-            },
-            {
-              step: "3",
-              title: "Explore Local Shops",
-              description: "Browse shops in your preferred categories",
-              icon: "/explore-icon.svg",
-            },
-            {
-              step: "4",
-              title: "Make Your Purchase",
-              description: "Shop at your chosen local store",
-              icon: "/cart-icon.svg",
-            },
-            {
-              step: "5",
-              title: "Scan QR Code",
-              description: "Use the app to scan the shop's QR code for payment",
-              icon: "/qr-icon.svg",
-            },
-            {
-              step: "6",
-              title: "Enjoy Your Discount",
-              description: "Avail discounts of up to 100% on your bill",
-              icon: "/discount-icon.svg",
-            },
-          ].map((step, index) => (
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {steps.map((step, index) => (
             <motion.div
               key={index}
-              className="flex flex-col items-center text-center bg-primary/10 p-8 rounded-xl shadow-sm hover:shadow-lg transition-shadow"
+              className="group relative overflow-hidden bg-white rounded-xl p-8 shadow-sm hover:shadow-md transition-all duration-300 border border-gray-100"
               initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 100, y: 0 }}
+              animate={{ opacity: 1, y: 0 }}
               transition={{
                 duration: 0.5,
                 delay: index * 0.1,
-                ease: "easeOut",
               }}
+              whileHover={{ y: -5 }}
             >
-              <div className="mb-6 h-16 w-16 rounded-full bg-red-200 flex items-center justify-center">
-                <span className="text-red-600 text-2xl font-bold">
-                  {step.step}
-                </span>
+              <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-red-500 to-red-300"></div>
+              
+              <div className="flex items-start space-x-4">
+                <div className="flex-shrink-0">
+                  <div className="w-12 h-12 rounded-full bg-red-50 flex items-center justify-center text-red-600 font-bold text-xl group-hover:bg-red-100 transition-colors">
+                    {step.step}
+                  </div>
+                </div>
+                <div>
+                  <h3 className="text-lg font-semibold text-gray-900 mb-2">
+                    {step.title}
+                  </h3>
+                  <p className="text-gray-600 text-sm leading-relaxed">
+                    {step.description}
+                  </p>
+                </div>
               </div>
-              <h3 className="text-xl font-bold mb-3">{step.title}</h3>
-              <p className="text-gray-600">{step.description}</p>
+              
+              <div className="absolute bottom-0 right-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <svg
+                  className="w-16 h-16 text-red-50"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    fillRule="evenodd"
+                    d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z"
+                    clipRule="evenodd"
+                  />
+                </svg>
+              </div>
             </motion.div>
           ))}
         </div>

@@ -1,29 +1,18 @@
-import Image from "next/image";
 import React from "react";
 
 const Achievement = () => {
   return (
     <div>
       <div className="flex justify-center padding-x padding-y mx-auto">
-        <section className="padding-x  max-w-7xl mx-auto  rounded-xl w-full bg-gray-100 relative overflow-hidden">
-          {/* Background Image - Using local image */}
-          <div className="absolute inset-0">
-            <Image
-              src="/assets/sale-img1.jpg" // Make sure the image is in public/assets folder
-              alt="Nearwala discount app background"
-              fill
-              className="object-cover"
-              quality={100}
-              priority
-            />
-          </div>
-
-          {/* Overlay */}
-          <div className="absolute inset-0 bg-black opacity-40"></div>
-
+        <section 
+          className="padding-x max-w-7xl mx-auto rounded-xl w-full relative overflow-hidden"
+          style={{
+            background: "linear-gradient(135deg, rgba(255,230,220,0.9) 0%, rgba(255,220,220,0.9) 25%, rgba(255,180,180,0.9) 50%, rgba(255,140,140,0.9) 100%)"
+          }}
+        >
           {/* Content Container */}
           <div className="relative z-10 max-w-7xl mx-auto px-4 py-12 sm:px-6 lg:px-8">
-            <div className="text-center  mb-12">
+            <div className="text-center mb-12">
               <h2 className="text-4xl font-bold text-white mb-4">
                 Why <span className="text-primary">Nearwala</span> Stands Out
               </h2>
@@ -38,11 +27,7 @@ const Achievement = () => {
               </p>
             </div>
 
-            {/* <h3 className="text-2xl font-semibold text-white text-center mb-8">
-              Our Achievements:
-            </h3> */}
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 ">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               {/* Cities */}
               <div className="bg-white/30 cursor-pointer backdrop-blur-sm p-6 hover_text_gray rounded-lg shadow-lg transition-all duration-300 hover:bg-white/60 hover:shadow-xl hover:scale-105">
                 <h3 className="text-3xl font-bold text-primary mb-2">5+</h3>
