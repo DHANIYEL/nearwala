@@ -25,17 +25,17 @@ const LaunchingSoon = () => {
     },
     {
       name: "Pune",
-      image: "/assets/pune.jpg",
+      image: "/assets/Pune.jpg",
       region: "Maharashtra",
     },
     {
       name: "Chennai",
-      image: "/assets/chennai.jpg",
+      image: "/assets/Chennai.jpg",
       region: "Tamil Nadu",
     },
     {
       name: "Vizag",
-      image: "/assets/vizag.jpg",
+      image: "/assets/Vizag.jpg",
       region: "Andhra Pradesh",
     },
   ];
