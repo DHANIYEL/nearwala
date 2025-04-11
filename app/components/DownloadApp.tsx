@@ -25,7 +25,7 @@ const DownloadApp = () => {
       animate={{ opacity: 100 }}
       transition={{ duration: 1.3, ease: "easeOut" }}
     >
-      <div className="bg-orange-50 max-md:py-12 max-lg:py-8 padding-x rounded-3xl max-w-7xl mx-auto overflow-hidden">
+      <div className="bg-orange-50  padding-x rounded-3xl max-w-7xl mx-auto overflow-hidden">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
           {/* Left side content */}
           <div className="space-y-4 md:space-y-6 text-center md:text-left">
@@ -76,12 +76,12 @@ const DownloadApp = () => {
 
           {/* Right side app screenshot */}
           <div className="flex justify-center items-end">
-            <div className="relative w-full max-w-sm -bottom-20 md:-bottom-28">
+            <div className="relative max-w-sm -bottom-20 md:-bottom-28">
               <Image
                 src="/assets/ss-img.png"
                 alt="Nearwala App Screenshot"
                 width={400}
-                height={600}
+                height={500}
                 className="object-contain"
               />
             </div>

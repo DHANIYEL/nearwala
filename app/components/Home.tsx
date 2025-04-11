@@ -31,7 +31,7 @@ export default function HeroSection() {
   };
 
   return (
-    <section className="w-full max-md:padding-y bg-white">
+    <section className="w-full max-md:padding-y max-sm:mt-10 bg-white">
       <div className="container padding-x padding-y mx-auto max-w-7xl">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
           {/* Left Column - Text Content */}
