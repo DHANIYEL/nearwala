@@ -1,59 +1,82 @@
-import React from "react";
+"use client";
+import { div } from "framer-motion/client";
+import React, { useState, useEffect, useRef } from "react";
+import CountUp from "react-countup";
 
 const Achievement = () => {
+  const [isVisible, setIsVisible] = useState(false);
+  const sectionRef = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        // Start animation when element is 20% in view
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+          observer.disconnect();
+        }
+      },
+      {
+        root: null,
+        rootMargin: "0px",
+        threshold: 0.2,
+      }
+    );
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    return () => {
+      if (sectionRef.current) {
+        observer.unobserve(sectionRef.current);
+      }
+    };
+  }, []);
+
+  // Stats data matching the image
+  const stats = [
+    { id: 1, value: 145, suffix: ",000k+", label: "Our Downloads 145000+" },
+    { id: 2, value: 50, suffix: ",000k+", label: "Our Users" },
+    { id: 3, value: 7, suffix: ",000+", label: "Loyal Users" },
+    { id: 4, value: 99, suffix: "%", label: "Customer Happiness" },
+  ];
+
   return (
-    <div>
-      <div className="flex justify-center padding-x padding-y mx-auto">
-        <section 
-          className="padding-x max-w-7xl mx-auto rounded-xl w-full relative overflow-hidden"
-          style={{
-            background: "linear-gradient(135deg, rgba(255,230,220,0.9) 0%, rgba(255,220,220,0.9) 25%, rgba(255,180,180,0.9) 50%, rgba(255,140,140,0.9) 100%)"
-          }}
-        >
-          {/* Content Container */}
-          <div className="relative z-10 max-w-7xl mx-auto px-4 py-12 sm:px-6 lg:px-8">
-            <div className="text-center mb-12">
-              <h2 className="text-4xl font-bold text-white mb-4">
-                Why <span className="text-primary">Nearwala</span> Stands Out
-              </h2>
-              <p className="text-lg text-white max-w-3xl mx-auto">
-                Transforming Local Shopping with Unbeatable Savings
-              </p>
-              <p className="text-lg text-white/90 max-sm:text-start max-w-3xl mx-auto mt-4">
-                We're revolutionizing neighborhood commerce by connecting
-                shoppers with incredible deals. Our platform empowers both
-                consumers and local businesses through mutually beneficial
-                discounts and promotions.
-              </p>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-              {/* Cities */}
-              <div className="bg-white/30 cursor-pointer backdrop-blur-sm p-6 hover_text_gray rounded-lg shadow-lg transition-all duration-300 hover:bg-white/60 hover:shadow-xl hover:scale-105">
-                <h3 className="text-3xl font-bold text-primary mb-2">5+</h3>
-                <p className="text-white">Operating Cities</p>
+    <div className="container px-6 mx-auto max-w-7xl padding-y">
+      <div
+        ref={sectionRef}
+        className="py-8 bg-gradient-to-r from-pink-100 to-rose-100 rounded-lg"
+      >
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 text-center">
+            {stats.map((stat) => (
+              <div
+                key={stat.id}
+                className="p-4 flex flex-col items-center justify-center"
+              >
+                <div className="text-red-500 text-5xl font-bold mb-2">
+                  {isVisible ? (
+                    <>
+                      <CountUp
+                        start={0}
+                        end={stat.value}
+                        duration={2.5}
+                        delay={0}
+                        useEasing={true}
+                        enableScrollSpy={false}
+                      />
+                      {stat.suffix}
+                    </>
+                  ) : (
+                    `0${stat.suffix}`
+                  )}
+                </div>
+                <p className="text-red-500 text-sm">{stat.label}</p>
               </div>
-
-              {/* Users */}
-              <div className="bg-white/30 cursor-pointer backdrop-blur-sm p-6 hover_text_gray rounded-lg shadow-lg transition-all duration-300 hover:bg-white/60 hover:shadow-xl hover:scale-105">
-                <h3 className="text-3xl font-bold text-primary mb-2">200K+</h3>
-                <p className="text-white">Happy Users</p>
-              </div>
-
-              {/* Partners */}
-              <div className="bg-white/30 cursor-pointer backdrop-blur-sm p-6 hover_text_gray rounded-lg shadow-lg transition-all duration-300 hover:bg-white/60 hover:shadow-xl hover:scale-105">
-                <h3 className="text-3xl font-bold text-primary mb-2">2K+</h3>
-                <p className="text-white">Partnered Shops</p>
-              </div>
-
-              {/* Transactions */}
-              <div className="bg-white/30 cursor-pointer backdrop-blur-sm p-6 hover_text_gray rounded-lg shadow-lg transition-all duration-300 hover:bg-white/60 hover:shadow-xl hover:scale-105">
-                <h3 className="text-3xl font-bold text-primary mb-2">200K+</h3>
-                <p className="text-white">Shopping Transactions</p>
-              </div>
-            </div>
+            ))}
           </div>
-        </section>
+        </div>
       </div>
     </div>
   );

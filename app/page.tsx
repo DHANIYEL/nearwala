@@ -17,10 +17,10 @@ const page = () => {
     <div>
       <NavBar />
       <Home />
-      <Achievement />
       <OurServices />
       <NCoinsSection />
       <Offers />
+      <Achievement />
       <Location />
       <LaunchingSoon />
       <Testimonials />
