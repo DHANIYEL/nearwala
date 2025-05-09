@@ -1,26 +1,53 @@
 "use client";
-import { div } from "framer-motion/client";
-import React, { useState, useEffect, useRef } from "react";
-import CountUp from "react-countup";
 
-const Achievement = () => {
+import React, { useState, useEffect, useRef } from 'react';
+import  CountUp  from 'react-countup';
+import { Award, Users, Calendar, Trophy } from 'lucide-react';
+
+export default function StatsDisplay() {
   const [isVisible, setIsVisible] = useState(false);
   const sectionRef = useRef(null);
+
+  const stats = [
+    {
+      id: 1,
+      value: 5,
+      suffix: '+',
+      label: 'Opreating Cities',
+      icon: Calendar
+    },
+    {
+      id: 2,
+      value: 200,
+      suffix: 'K+',
+      label: 'Happy Clients',
+      icon: Users
+    },
+    {
+      id: 3,
+      value: 2000,
+      suffix: '+',
+      label: 'Partnerd Shops',
+      icon: Trophy
+    },
+    {
+      id: 4,
+      value: 200,
+      suffix: 'k+',
+      label: 'Shopping Transactions',
+      icon: Award
+    }
+  ];
 
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
-        // Start animation when element is 20% in view
         if (entry.isIntersecting) {
           setIsVisible(true);
-          observer.disconnect();
+          observer.unobserve(entry.target);
         }
       },
-      {
-        root: null,
-        rootMargin: "0px",
-        threshold: 0.2,
-      }
+      { threshold: 0.2 }
     );
 
     if (sectionRef.current) {
@@ -34,27 +61,22 @@ const Achievement = () => {
     };
   }, []);
 
-  // Stats data matching the image
-  const stats = [
-    { id: 1, value: 145, suffix: ",000k+", label: "Our Downloads 145000+" },
-    { id: 2, value: 50, suffix: ",000k+", label: "Our Users" },
-    { id: 3, value: 7, suffix: ",000+", label: "Loyal Users" },
-    { id: 4, value: 99, suffix: "%", label: "Customer Happiness" },
-  ];
-
   return (
-    <div className="container px-6 mx-auto max-w-7xl padding-y">
+    <div className="container px-6 mx-auto max-w-8xl ">
       <div
         ref={sectionRef}
-        className="py-8 bg-gradient-to-r from-pink-100 to-rose-100 rounded-lg"
+        className="py-12 bg-gradient-to-r from-pink-100 to-rose-100 rounded-lg shadow-md"
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 text-center">
             {stats.map((stat) => (
               <div
                 key={stat.id}
-                className="p-4 flex flex-col items-center justify-center"
+                className="p-6 flex flex-col items-center justify-center transition-transform duration-300 hover:scale-105"
               >
+                <div className="mb-4 text-red-500">
+                  <stat.icon size={48} strokeWidth={1.5} />
+                </div>
                 <div className="text-red-500 text-5xl font-bold mb-2">
                   {isVisible ? (
                     <>
@@ -64,15 +86,14 @@ const Achievement = () => {
                         duration={2.5}
                         delay={0}
                         useEasing={true}
-                        enableScrollSpy={false}
                       />
                       {stat.suffix}
                     </>
                   ) : (
-                    `0${stat.suffix}`
+                    0${stat.suffix}
                   )}
                 </div>
-                <p className="text-red-500 text-sm">{stat.label}</p>
+                <p className="text-red-500 text-lg font-medium mt-1">{stat.label}</p>
               </div>
             ))}
           </div>
@@ -80,6 +101,4 @@ const Achievement = () => {
       </div>
     </div>
   );
-};
-
-export default Achievement;
+}
