@@ -62,10 +62,10 @@ export default function StatsDisplay() {
   }, []);
 
   return (
-    <div className="container px-6 mx-auto max-w-8xl ">
+    <div className=" ">
       <div
         ref={sectionRef}
-        className="py-12 bg-gradient-to-r from-pink-100 to-rose-100 rounded-lg shadow-md"
+        className="py-12 bg-gradient-to-r from-pink-50 to-rose-50 rounded-lg"
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 text-center">
@@ -90,7 +90,7 @@ export default function StatsDisplay() {
                       {stat.suffix}
                     </>
                   ) : (
-                    0${stat.suffix}
+                    `0${stat.suffix}`
                   )}
                 </div>
                 <p className="text-red-500 text-lg font-medium mt-1">{stat.label}</p>

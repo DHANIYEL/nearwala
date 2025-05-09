@@ -78,7 +78,7 @@ const Footer = () => {
               <li>
                 <Link
                   href="/about"
-                  className="text-gray-600 hover:text-gray-900"
+                  className="text-gray-600 hover:text-red-600"
                 >
                   About Us
                 </Link>
@@ -86,20 +86,20 @@ const Footer = () => {
               <li>
                 <Link
                   href="#downloadapp"
-                  className="text-gray-600 hover:text-gray-900"
+                  className="text-gray-600 hover:text-red-600"
                 >
                   Features
                 </Link>
               </li>
               <li>
-                <Link href="#footer" className="text-gray-600 hover:text-gray-900">
+                <Link href="#footer" className="text-gray-600 hover:text-red-600">
                   Support
                 </Link>
               </li>
               <li>
                 <Link
                   href="#offers"
-                  className="text-gray-600 hover:text-gray-900"
+                  className="text-gray-600 hover:text-red-600"
                 >
                   Offers
                 </Link>
@@ -112,22 +112,22 @@ const Footer = () => {
             <h3 className="font-bold text-lg mb-4">Company</h3>
             <ul className="space-y-3">
               <li>
-                <Link href="/privacy-policy" className="text-gray-600 hover:text-gray-900">
+                <Link href="/privacy-policy" className="text-gray-600 hover:text-red-600">
                   Privacy Policy
                 </Link>
               </li>
               <li>
-                <Link href="/refund-policy" className="text-gray-600 hover:text-gray-900">
+                <Link href="/refund-policy" className="text-gray-600 hover:text-red-600">
                   Refund Policy
                 </Link>
               </li>
               <li>
-                <Link href="/terms-conditions" className="text-gray-600 hover:text-gray-900">
+                <Link href="/terms-conditions" className="text-gray-600 hover:text-red-600">
                   Terms & Conditions{" "}
                 </Link>
               </li>
               <li>
-                <Link href="/faq" className="text-gray-600 hover:text-gray-900">
+                <Link href="/faq" className="text-gray-600 hover:text-red-600">
                   FAQ
                 </Link>
               </li>
@@ -141,27 +141,27 @@ const Footer = () => {
                 <h3 className="font-bold text-lg mb-4">Support</h3>
                 <ul className="space-y-3">
                   <li>
-                    <Link href="#" className="text-gray-600 hover:text-gray-900">
+                    <Link href="#" className="text-gray-600 hover:text-red-600">
                       Account
                     </Link>
                   </li>
                   <li>
-                    <Link href="#" className="text-gray-600 hover:text-gray-900">
+                    <Link href="#" className="text-gray-600 hover:text-red-600">
                       Support Center
                     </Link>
                   </li>
                   <li>
-                    <Link href="#" className="text-gray-600 hover:text-gray-900">
+                    <Link href="#" className="text-gray-600 hover:text-red-600">
                       Feedback
                     </Link>
                   </li>
                   <li>
-                    <Link href="#" className="text-gray-600 hover:text-gray-900">
+                    <Link href="#" className="text-gray-600 hover:text-red-600">
                       Contact Us
                     </Link>
                   </li>
                   <li>
-                    <Link href="#" className="text-gray-600 hover:text-gray-900">
+                    <Link href="#" className="text-gray-600 hover:text-red-600">
                       Accessibility
                     </Link>
                   </li>
